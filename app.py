@@ -48,11 +48,12 @@ if overtime != "All":
     filtered_df = filtered_df[filtered_df['OverTime'] == overtime]
 
 # ====================== TABS ======================
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📊 Engagement Health Overview", 
     "🔥 Burnout Risk Dashboard", 
     "📈 Role & Career Stage Analysis", 
-    "🚨 Manager Action Panel"
+    "🚨 Manager Action Panel",
+    "📄 Research Paper"
 ])
 
 # Tab 1: Engagement Health Overview
@@ -108,5 +109,23 @@ with tab4:
     - Review workload for frequent travelers and long-commute staff  
     - Career rotation for mid-level employees (6–15 years tenure)  
     """)
+
+# ==================== NEW TAB: Research Paper ====================
+with tab5:
+    st.header("📄 Research Paper")
+    st.markdown("### Full Detailed Research Paper")
+    
+    st.markdown("""
+    This document contains the complete analysis, methodology, findings, and recommendations.
+    """)
+    
+    # Big prominent button
+    st.link_button(
+        label="📖 Open Full Research Paper",
+        url="https://circular-hortensia-65d.notion.site/Palo-Alto-Networks-Employee-Engagement-Research-Paper-32e86e430b938037903ac8244f293eac",
+        use_container_width=True
+    )
+    
+    st.info("The research paper includes all 6 analytical steps, detailed insights, visuals, and recommendations.")
 
 st.caption("Palo Alto Networks | Preventive Employee Experience Diagnostics | HR Analytics Project")
